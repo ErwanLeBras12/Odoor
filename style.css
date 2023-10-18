@@ -282,4 +282,20 @@ canvas {
   display: block;
   margin: auto;  
 }
+  /* Styles pour le conteneur global */
+        .container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styles pour l'icône de la porte */
+        .door-icon {
+            font-size: 48px;
+        }
+
+        /* Styles pour l'icône de la batterie */
+        .battery-icon {
+            font-size: 36px;
+            color: #3498db; /* Couleur de la batterie */
+        }
 

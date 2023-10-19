@@ -1,74 +1,10 @@
-/*fonts (à mettre toujours en haut du css)*/
-@font-face {
-    font-family: 'Goodfish';
-    src: url('/elb/fonts/Goodfish-Bold.woff2') format('woff2'),
-        url('/elb/fonts/Goodfish-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Goodfish';
-    src: url('/elb/fonts/Goodfish-Italic.woff2') format('woff2'),
-        url('/elb/fonts/Goodfish-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Goodfish';
-    src: url('/elb/fonts/Goodfish-BoldItalic.woff2') format('woff2'),
-        url('/elb/fonts/Goodfish-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Goodfish';
-    src: url('/elb/fonts/Goodfish-Regular.woff2') format('woff2'),
-        url('/elb/fonts/Goodfish-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 
 p {
-  color: black;
-  font-family: 'Goodfish', sans-serif;
+  color: black;  
   text-align: left;  
 }
 
-#p1 {
-  color: white;  
-  font-family: 'Goodfish', sans-serif;
-}
 
-a#p2 {
-  color: white;  
-  font-family: 'Goodfish', sans-serif;  
-  font-size: 16px;
-  flex: 1;  
-
-}
-
-#p3{
-  font-family: Helvetica, Verdana, Arial, sans-serif;
-  font-size: 15px;
-  color: white;  
-  position: absolute;
-  right: 40px;
-  top: 10px;
-}
-
-#p4{
-   color: black;
-  font-family: 'Goodfish', sans-serif;
-  text-align: center;  
-}
 
 h1{
    font-size: 60px;
@@ -105,197 +41,21 @@ body{
   width:100%;
 }
 
-/*footer*/
-#footer{  
-background:black;
-position:fixed;
-bottom:0;
-width:100%;
-height:50px;  
-}
 
-
-/*menu*/
-#menu {
-height:20px;
-margin-top: -8px;
-margin-left: -8px;
-}
-
-#menu ul {
-margin:0;
-padding:0;
-list-style-type:none;
-font-family: Helvetica, Verdana, Arial, sans-serif;
-font-size: 15px;
-}
-
-#menu li {
-float:left;
-margin:auto;
-padding:0;
-width:129px;
-border-right: #000000 solid 1px;
-border-left: #4C4C4C solid 1px;
-color: #E6E6E6;
-background-color:#454545;
-}
-
-#menu li a {
-display:block;
-width:129px;
-height:20px;
-color:#ffffff;
-text-decoration:none;
-padding:5px;
-margin-left: 50px;
-}
-
-#menu li a:hover {
-color:#C1A500;
-
-}
-
-#menu ul li ul {
-display:none;
-width:175px;
-}
-
-#menu ul li:hover a {
-display:block;
-width:170px;
-}
-
-#menu ul li:hover ul {
-display:block;
-width:175px;
-}
-
-#menu li:hover ul li {
-float:none;
-border-top: #000000 solid 1px;
-border-bottom: #4C4C4C solid 1px;
-border-right: #000000 solid 1px;
-border-left: #4C4C4C solid 1px;
-width:175px;
-}
-
-/*fin menu*/
-#accueil{
-  position: absolute;
-  top: -2px;
-  left: -2px;
-}
-
-#blog{
-  position: absolute;
-  top: -2px;
-  left: 130px;
-}
-
-#pres{
-  background-color: white;
-  font-size: 20px;
-  width: 700px;
-  height: auto;
-  margin: 0 auto;
-  padding-right: 10px;
-  padding-left: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-family: 'Goodfish', sans-serif;
-  color: black;
-}
-
-/*articles du blog*/
-#articles{
-  background-color: white;
-  width: 1000px;
-  height: auto;  
-  margin: auto;
-  margin-bottom: 35px;
-
-}
-
-#imgBlog{
-  max-height: 500px;  
-  margin-bottom: 10px;
-  text-align: center;
-  
-}
-
-#idPage{
-  text-align: center;
-}
-
-#icolog{  
- 
-  position: absolute;
-  top: 30px;
-  right: 66px;
-
-}
-
-#logoArticle{
- float: left;
- margin-left: 5px;
- margin-top: 5px;
-}
-
-#formAdm{
-  margin: auto;
-  text-align: center;
-}
-
-#projects{
-  width: 250px;
-  height: 150px;
-  position: absolute;
-  background-color: white;
-  font-family: 'Goodfish', sans-serif;
-  color: black;
-  padding-left: 6px;
-  top: 169px;
-
-}
-
-#formaccount{
-  width: 300px;
-  height: auto;
-  margin-left:750px;
-  margin-top: -580px;
-  padding: 1px;
-  background-color: cornsilk; 
-  position: absolute;
-  text-align: center;
-}
-
-textarea{
-  width: 800px;
-  height: 600px;
-  maxlength="3000"
-}
-
-/*Jeu paramètres*/
-canvas {
-  border: 1px solid white;
-  display: block;
-  margin: auto;  
-}
   /* Styles pour le conteneur global */
-        .container {
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
 
-        /* Styles pour l'icône de la porte */
-        .door-icon {
-            font-size: 48px;
-        }
+/* Styles pour l'icône de la porte */
+.door-icon {
+    font-size: 48px;
+}
 
-        /* Styles pour l'icône de la batterie */
-        .battery-icon {
-            font-size: 36px;
-            color: #3498db; /* Couleur de la batterie */
-        }
+/* Styles pour l'icône de la batterie */
+.battery-icon {
+      font-size: 36px;
+    color: #3498db; /* Couleur de la batterie */
+}
 

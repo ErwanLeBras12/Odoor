@@ -11,8 +11,7 @@
     <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
     <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
 
-    <script>
-        import firebase from 'firebase/app';
+    <script>     
         
       // Configuration Firebase (à obtenir à partir de votre projet Firebase)
       var firebaseConfig = {
@@ -24,11 +23,8 @@
       };
 
       // Initialisez Firebase avec la configuration
-      firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <script>
-       import 'firebase/database'; 
+      firebase.initializeApp(firebaseConfig);       
+       
       // Obtenez une référence à la base de données
       var database = firebase.database();
       
@@ -40,10 +36,8 @@
         // La fonction callback sera appelée chaque fois que les données changent
         var data = snapshot.val(); // Les données sont dans l'objet snapshot.val()
         console.log(data); // Affichez les données dans la console
-
-        
-      });
     </script>
+
 
 
     <div class="container">

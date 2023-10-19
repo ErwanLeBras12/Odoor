@@ -3,16 +3,15 @@
   <title>Odoor v1.0</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">  
- </head>
+
+   <!-- Inclure le SDK Firebase -->
+   <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+   <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
+   <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
+  </head>
  <body>
 
-    <!-- Inclure le SDK Firebase -->
-    <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
-    <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
-    <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
-
-    <script>     
-        
+  <script>     
       // Configuration Firebase (à obtenir à partir de votre projet Firebase)
       var firebaseConfig = {
         apiKey: "AIzaSyAJ7QUcvK4F2n2qeWMLviBXNIJzM45kNXw",

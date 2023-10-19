@@ -12,6 +12,8 @@
     <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
 
     <script>
+        import firebase from 'firebase/app';
+        
       // Configuration Firebase (à obtenir à partir de votre projet Firebase)
       var firebaseConfig = {
         apiKey: "AIzaSyAJ7QUcvK4F2n2qeWMLviBXNIJzM45kNXw",
@@ -26,6 +28,7 @@
     </script>
 
     <script>
+       import 'firebase/database'; 
       // Obtenez une référence à la base de données
       var database = firebase.database();
       

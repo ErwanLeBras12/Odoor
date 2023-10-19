@@ -1,2 +1,3 @@
 # Odoor
-2023-10-18 Création du site web permettant d'afficher l'état de la porte de garage et la batterie du téléphone
+2023-10-18 Website Creation
+2023-10-19 Try to connect to firebase database linked to application Odoor

@@ -18,8 +18,8 @@
   var dataRef = database.ref("status");
 
   // Écoutez les modifications des données
-  dataRef.on("value", function(snapshot)) {
+  dataRef.on("value", function(snapshot) {
     // La fonction callback sera appelée chaque fois que les données changent
     var data = snapshot.val(); // Les données sont dans l'objet snapshot.val()
     console.log(data); // Affichez les données dans la console
-    };
+    });

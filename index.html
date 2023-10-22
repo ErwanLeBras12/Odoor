@@ -2,16 +2,16 @@
  <head>
   <title>Odoor v1.0</title>
   <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">  
-
-   <!-- Inclure le SDK Firebase -->
-   <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
-   <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
-   <script type ="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
-  </head>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> 
+  <!-- Inclure le SDK Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script> 
+ </head>
  <body>
 
-  <script>     
+    <script>     
+        
       // Configuration Firebase (à obtenir à partir de votre projet Firebase)
       var firebaseConfig = {
         apiKey: "AIzaSyAJ7QUcvK4F2n2qeWMLviBXNIJzM45kNXw",
@@ -31,11 +31,11 @@
       var dataRef = database.ref("status");
 
       // Écoutez les modifications des données
-      dataRef.on("value", function(snapshot) {
+      dataRef.on("value", function(snapshot)) {
         // La fonction callback sera appelée chaque fois que les données changent
         var data = snapshot.val(); // Les données sont dans l'objet snapshot.val()
         console.log(data); // Affichez les données dans la console
-      });
+        };
     </script>
 
 

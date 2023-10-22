@@ -3,9 +3,7 @@
   var firebaseConfig = {
     apiKey: "AIzaSyAJ7QUcvK4F2n2qeWMLviBXNIJzM45kNXw",
     authDomain: "odoor-99a82.firebaseapp.com",    
-    projectId: "odoor-99a82",
-    storageBucket: "odoor-99a82.appspot.com",    
-    appId: "1:349207637584:android:7670107a1f508fecd2eb55"
+    projectId: "odoor-99a82",  
   };
 
   // Initialisez Firebase avec la configuration

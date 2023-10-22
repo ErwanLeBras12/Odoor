@@ -1,8 +1,8 @@
-         
+     
   // Configuration Firebase (à obtenir à partir de votre projet Firebase)
   var firebaseConfig = {
     apiKey: "AIzaSyAJ7QUcvK4F2n2qeWMLviBXNIJzM45kNXw",
-    authDomain: "https://odoor-99a82-default-rtdb.europe-west1.firebasedatabase.app/",    
+    databaseURL: "https://odoor-99a82-default-rtdb.europe-west1.firebasedatabase.app/",    
     projectId: "odoor-99a82",  
   };
 

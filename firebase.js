@@ -8,7 +8,7 @@
        const firebaseApp = firebase.initializeApp(firebaseConfig);
        var database = firebaseApp.database();
        const auth = firebaseApp.auth();
-
+        console.log("test");
       // Obtenez une référence à un chemin spécifique dans la base de données
       var dataRef = database.ref("status");
     

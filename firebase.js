@@ -9,7 +9,11 @@
   };
 
   // Initialisez Firebase avec la configuration
-  firebase.initializeApp(firebaseConfig);       
+  firebase.initializeApp(firebaseConfig)
+  .catch(function(error) {
+    console.error("Erreur d'initialisation Firebase : " + error);
+  });
+      
    
   // Obtenez une référence à la base de données
   var database = firebase.database();

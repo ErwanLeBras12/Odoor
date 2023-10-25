@@ -19,38 +19,41 @@ const db = getDatabase(firebaseApp);
 const batteryRef = ref(db, '/battery');
 const statusRef = ref(db, '/status');
 
-// Récupérer la valeur initiale de "battery"
-get(batteryRef)
-  .then((snapshot) => {
+// Lorsque la page est chargée
+document.addEventListener('DOMContentLoaded', function() {
+  // Récupérer la référence aux éléments de la page
+  const batteryElement = document.querySelector('.battery-icon');
+  const statusElement = document.querySelector('.door-icon');
+
+  // Récupérer la valeur initiale de "battery"
+  get(batteryRef)
+    .then((snapshot) => {
+      const batteryValue = snapshot.val();
+      batteryElement.textContent = `Niveau de batterie : ${batteryValue}%`;
+    })
+    .catch((error) => {
+      console.error('Erreur lors de la récupération de la valeur initiale de la batterie :', error);
+    });
+
+  // Récupérer la valeur initiale de "status"
+  get(statusRef)
+    .then((snapshot) => {
+      const statusValue = snapshot.val();
+      statusElement.textContent = `État de la porte : ${statusValue}`;
+    })
+    .catch((error) => {
+      console.error('Erreur lors de la récupération de la valeur initiale du statut :', error);
+    });
+
+  // Écouter les changements de la clé "battery" (si vous le souhaitez)
+  onValue(batteryRef, (snapshot) => {
     const batteryValue = snapshot.val();
-    console.log('Valeur initiale de la batterie :', batteryValue);
-  })
-  .catch((error) => {
-    console.error('Erreur lors de la récupération de la valeur initiale de la batterie :', error);
+    batteryElement.textContent = `Niveau de batterie : ${batteryValue}%`;
   });
 
-// Récupérer la valeur initiale de "status"
-get(statusRef)
-  .then((snapshot) => {
+  // Écouter les changements de la clé "status" (si vous le souhaitez)
+  onValue(statusRef, (snapshot) => {
     const statusValue = snapshot.val();
-    console.log('Valeur initiale du statut :', statusValue);
-  })
-  .catch((error) => {
-    console.error('Erreur lors de la récupération de la valeur initiale du statut :', error);
+    statusElement.textContent = `État de la porte : ${statusValue}`;
   });
-
-// Écouter les changements de la clé "battery"
-onValue(batteryRef, (snapshot) => {
-  const batteryValue = snapshot.val();
-  console.log('Valeur de la batterie :', batteryValue);
-}, {
-  onlyOnce: true, // Cette option permet d'écouter l'événement une seule fois
-});
-
-// Écouter les changements de la clé "status"
-onValue(statusRef, (snapshot) => {
-  const statusValue = snapshot.val();
-  console.log('Valeur du statut :', statusValue);
-}, {
-  onlyOnce: true, // Cette option permet d'écouter l'événement une seule fois
 });

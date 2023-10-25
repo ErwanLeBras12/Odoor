@@ -1,7 +1,7 @@
-// Importer Firebase en utilisant la syntaxe des modules
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
 import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
 
+// Configuration Firebase
 const firebaseConfig = {
   apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',
   authDomain: 'odoor-99a82.firebaseapp.com',
@@ -12,44 +12,26 @@ const firebaseConfig = {
   appId: '1:349207637584:web:6ea9efeb4f2189ebd2eb55'
 };
 
-// Initialiser Firebase avec la configuration
-const app = firebase.initializeApp(firebaseConfig);
+// Initialisation de Firebase
+const firebaseApp = initializeApp(firebaseConfig);
 
-// Obtenir une référence à la base de données Firebase
-const database = firebase.database(app);
+// Obtenir une référence à la base de données
+const db = getDatabase(firebaseApp);
+const batteryRef = ref(db, '/battery');
+const statusRef = ref(db, '/status');
 
-// Lire la valeur de la clé "battery" dans la base de données
-database.ref('/battery').once('value')
-  .then((snapshot) => {
-    const batteryValue = snapshot.val();
-    console.log('Valeur de la batterie :', batteryValue);
-  })
-  .catch((error) => {
-    console.error('Erreur lors de la lecture de la batterie :', error);
-  });
-
-// Lire la valeur de la clé "status" dans la base de données
-database.ref('/status').once('value')
-  .then((snapshot) => {
-    const statusValue = snapshot.val();
-    console.log('Valeur du statut :', statusValue);
-  })
-  .catch((error) => {
-    console.error('Erreur lors de la lecture du statut :', error);
-  });
-
-// Surveiller les changements de la clé "battery" dans la base de données
-database.ref('/battery').on('value', (snapshot) => {
+// Écouter les changements de la clé "battery"
+onValue(batteryRef, (snapshot) => {
   const batteryValue = snapshot.val();
-  console.log('Nouvelle valeur de la batterie :', batteryValue);
-}, (error) => {
-  console.error('Erreur lors de la surveillance de la batterie :', error);
+  console.log('Valeur de la batterie :', batteryValue);
+}, {
+  onlyOnce: true, // Cette option permet d'écouter l'événement une seule fois
 });
 
-// Surveiller les changements de la clé "status" dans la base de données
-database.ref('/status').on('value', (snapshot) => {
+// Écouter les changements de la clé "status"
+onValue(statusRef, (snapshot) => {
   const statusValue = snapshot.val();
-  console.log('Nouvelle valeur du statut :', statusValue);
-}, (error) => {
-  console.error('Erreur lors de la surveillance du statut :', error);
+  console.log('Valeur du statut :', statusValue);
+}, {
+  onlyOnce: true, // Cette option permet d'écouter l'événement une seule fois
 });

@@ -17,8 +17,8 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 // Obtenir une référence à la base de données
 const db = getDatabase(firebaseApp);
-const batteryRef = ref(db, 'battery');
-const statusRef = ref(db, 'status');
+const batteryRef = ref(db, '/battery');
+const statusRef = ref(db, '/status');
 
 // Récupérer la valeur initiale de "battery"
 get(batteryRef)

@@ -20,6 +20,26 @@ const db = getDatabase(firebaseApp);
 const batteryRef = ref(db, '/battery');
 const statusRef = ref(db, '/status');
 
+// Récupérer la valeur initiale de "battery"
+get(batteryRef)
+  .then((snapshot) => {
+    const batteryValue = snapshot.val();
+    console.log('Valeur initiale de la batterie :', batteryValue);
+  })
+  .catch((error) => {
+    console.error('Erreur lors de la récupération de la valeur initiale de la batterie :', error);
+  });
+
+// Récupérer la valeur initiale de "status"
+get(statusRef)
+  .then((snapshot) => {
+    const statusValue = snapshot.val();
+    console.log('Valeur initiale du statut :', statusValue);
+  })
+  .catch((error) => {
+    console.error('Erreur lors de la récupération de la valeur initiale du statut :', error);
+  });
+
 // Écouter les changements de la clé "battery"
 onValue(batteryRef, (snapshot) => {
   const batteryValue = snapshot.val();

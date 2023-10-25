@@ -5,7 +5,7 @@ import { getDatabase, ref, onValue, get } from 'https://www.gstatic.com/firebase
 const firebaseConfig = {
   apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',
   authDomain: 'odoor-99a82.firebaseapp.com',
-  databaseURL: 'https://odoor-99a82-default-rtdb.europe-west1.firebasedatabase.app',
+  databaseURL: 'https://odoor-99a82-default-rtdb.europe-west1.firebasedatabase.app/',
   projectId: 'odoor-99a82',
   storageBucket: 'odoor-99a82.appspot.com',
   messagingSenderId: '349207637584',

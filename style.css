@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 p {
   color: black;  
@@ -60,66 +59,3 @@ body{
     color: #3498db; /* Couleur de la batterie */
 }
 
-=======
-
-p {
-  color: black;  
-  text-align: left;  
-}
-
-
-
-h1{
-   font-size: 60px;
-   text-align: center;
-   color: white;
-}
-
-h2{
-   font-size: 24px;
-   text-align: center;
-   color: black;
-}
-
-
-h3 {
-  color: black;
-  font-family: 'Goodfish', sans-serif;
-  text-align: center;
-  font-size: 14px;
-  padding-top: 5px;
-}
-
-h4{
-  font-size: 15px;
-  color: steelblue;
-  text-align: center;  
-}
-
-body{  
-  background-repeat: no-repeat;
-  background-color: black;
-  overflow-x: hidden;
-  height: 100%;
-  width:100%;
-}
-
-
-  /* Styles pour le conteneur global */
-.container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-/* Styles pour l'icône de la porte */
-.door-icon {
-    font-size: 48px;
-}
-
-/* Styles pour l'icône de la batterie */
-.battery-icon {
-      font-size: 36px;
-    color: #3498db; /* Couleur de la batterie */
-}
-
->>>>>>> d55d2bf0852906cdadb86b999108d7a7447fa7f0

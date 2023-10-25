@@ -1,5 +1,6 @@
-import firebase from '/node_modules/firebase/app';
-import '/node_modules/firebase/database';
+// Importer Firebase en utilisant la syntaxe des modules
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',
@@ -13,7 +14,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-import { database } from './firebase'; // Assurez-vous d'importer correctement la configuration Firebase
+const database = firebase.database(); // Utilisez directement la base de données Firebase
 
 // Lire la valeur de la clé "battery" dans la base de données
 database.ref('/battery').once('value')
@@ -44,7 +45,7 @@ database.ref('/battery').on('value', (snapshot) => {
 });
 
 // Surveiller les changements de la clé "status" dans la base de données
-database.ref('v/status').on('value', (snapshot) => {
+database.ref('/status').on('value', (snapshot) => {
   const statusValue = snapshot.val();
   console.log('Nouvelle valeur du statut :', statusValue);
 }, (error) => {

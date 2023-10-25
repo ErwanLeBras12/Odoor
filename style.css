@@ -51,6 +51,7 @@ body{
 /* Styles pour l'icône de la porte */
 .door-icon {
     font-size: 36px;
+    color: #3498db;
 }
 
 /* Styles pour l'icône de la batterie */

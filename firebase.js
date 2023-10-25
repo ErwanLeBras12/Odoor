@@ -3,13 +3,9 @@ import { getDatabase, ref, onValue, get } from 'https://www.gstatic.com/firebase
 
 // Configuration Firebase
 const firebaseConfig = {
-  apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',
-  authDomain: 'odoor-99a82.firebaseapp.com',
+  apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',  
   databaseURL: 'https://odoor-99a82-default-rtdb.europe-west1.firebasedatabase.app/',
-  projectId: 'odoor-99a82',
-  storageBucket: 'odoor-99a82.appspot.com',
-  messagingSenderId: '349207637584',
-  appId: '1:349207637584:web:6ea9efeb4f2189ebd2eb55'
+  projectId: 'odoor-99a82'
 };
 
 // Initialisation de Firebase

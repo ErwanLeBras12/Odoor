@@ -1,6 +1,6 @@
 // Importer Firebase en utilisant la syntaxe des modules
-import firebase from './node_modules/firebase/app';
-import './node_modules/firebase/database';
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',
@@ -12,9 +12,11 @@ const firebaseConfig = {
   appId: '1:349207637584:web:6ea9efeb4f2189ebd2eb55'
 };
 
-firebase.initializeApp(firebaseConfig);
+// Initialiser Firebase avec la configuration
+const app = firebase.initializeApp(firebaseConfig);
 
-const database = firebase.database(); // Utilisez directement la base de données Firebase
+// Obtenir une référence à la base de données Firebase
+const database = firebase.database(app);
 
 // Lire la valeur de la clé "battery" dans la base de données
 database.ref('/battery').once('value')

@@ -1,6 +1,6 @@
 // Importer Firebase en utilisant la syntaxe des modules
-import firebase from 'firebase/app';
-import 'firebase/database';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
+import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCKxxd4I-R08z6gWzTzMLkYX-T6RGcZpGo',

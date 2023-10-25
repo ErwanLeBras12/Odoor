@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   get(batteryRef)
     .then((snapshot) => {
       const batteryValue = snapshot.val();
+      console.log('Valeur initiale de la batterie :', batteryValue);
       batteryElement.textContent = `Niveau de batterie : ${batteryValue}%`;
     })
     .catch((error) => {
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   get(statusRef)
     .then((snapshot) => {
       const statusValue = snapshot.val();
+      console.log('Valeur initiale de la porte :', statusValue);
       statusElement.textContent = `État de la porte : ${statusValue}`;
     })
     .catch((error) => {
@@ -49,11 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
   onValue(batteryRef, (snapshot) => {
     const batteryValue = snapshot.val();
     batteryElement.textContent = `Niveau de batterie : ${batteryValue}%`;
+    console.log('Valeur mise à jour du niveau de batterie :', batteryValue);
   });
 
   // Écouter les changements de la clé "status" (si vous le souhaitez)
   onValue(statusRef, (snapshot) => {
     const statusValue = snapshot.val();
     statusElement.textContent = `État de la porte : ${statusValue}`;
+    console.log('Valeur mise à jour de la porte :', statusValue);
   });
 });

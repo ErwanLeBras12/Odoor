@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then((snapshot) => {
       const batteryValue = snapshot.val().battery;
       console.log('Valeur initiale : Niveau de batterie :', batteryValue);
-      batteryElement.textContent = `Niveau de batterie : ${batteryValue}%`;
+      batteryElement.textContent = `${batteryValue}%`;
     })
     .catch((error) => {
       console.error('Erreur lors de la récupération de la valeur initiale de la batterie :', error);
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then((snapshot) => {
       const statusValue = snapshot.val().status;
       console.log('Valeur initiale : Etat de la porte :', statusValue);
-      statusElement.textContent = `État de la porte : ${statusValue}`;
+      statusElement.textContent = `${statusValue}`;
     })
     .catch((error) => {
       console.error('Erreur lors de la récupération de la valeur initiale du statut :', error);
@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Écouter les changements de la clé "battery" (si vous le souhaitez)
   onValue(batteryRef, (snapshot) => {
     const batteryValue = snapshot.val().battery;
-    batteryElement.textContent = `Niveau de batterie : ${batteryValue}%`;
+    batteryElement.textContent = `${batteryValue}%`;
     console.log('Valeur mise à jour : niveau de batterie :', batteryValue);
   });
 
   // Écouter les changements de la clé "status" (si vous le souhaitez)
   onValue(statusRef, (snapshot) => {
     const statusValue = snapshot.val().status;
-    statusElement.textContent = `État de la porte : ${statusValue}`;
+    statusElement.textContent = `${statusValue}`;
     console.log('Valeur mise à jour : Etat de la porte :', statusValue);
   });
 });

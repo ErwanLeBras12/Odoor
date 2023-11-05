@@ -1,21 +1,24 @@
 
 p {
-  color: white;  
-  text-align: left;  
+  color: black;      
 }
 
-
+#p1{
+  color:black;
+  margin-left:190px;
+  margin-top:20px;
+}
 
 h1{
    font-size: 60px;
    text-align: center;
-   color: white;
+   color: black;
 }
 
 h2{
-   font-size: 24px;
+   font-size: 32px;
    text-align: center;
-   color: white;
+   color: black;
 }
 
 
@@ -35,12 +38,48 @@ h4{
 
 body{  
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: whitesmoke;
   overflow-x: hidden;
   height: 100%;
   width:100%;
 }
 
+#bat_ico{
+  display:inline-block;
+  vertical-align:text-bottom;
+}
+
+#porte_ico{
+  display:inline-block;
+  vertical-align: middle;
+  margin-top: -15px;
+}
+
+#logo{
+  margin-top:-50px;
+  width:200px;
+  height:200px;
+}
+
+#logo_git{
+  float: right;
+  margin-top: -130px;
+  margin-right: 300px;
+}
+
+#logo_lk{
+  float: right;
+  margin-top: -128px;
+  margin-right: 265px;
+}
+
+#botpage{
+  position: absolute;
+ /* En fixant la distance avec le bas à 0, on force le contenu à être aligné vers le bas */
+ bottom: 25px;
+ width:100%; 
+
+}
 
   /* Styles pour le conteneur global */
 .container {
@@ -52,11 +91,13 @@ body{
 .door-icon {
     font-size: 36px;
     color: #3498db;
+    display:inline-block;
 }
 
 /* Styles pour l'icône de la batterie */
 .battery-icon {
       font-size: 36px;
     color: #3498db; /* Couleur de la batterie */
+    display:inline-block;
 }
 

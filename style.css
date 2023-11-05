@@ -90,14 +90,14 @@ body{
 /* Styles pour l'icône de la porte */
 .door-icon {
     font-size: 36px;
-    color: #3498db;
+    color: blue;
     display:inline-block;
 }
 
 /* Styles pour l'icône de la batterie */
 .battery-icon {
-      font-size: 36px;
-    color: #3498db; /* Couleur de la batterie */
+    font-size: 36px;
+    color: blue;
     display:inline-block;
 }
 

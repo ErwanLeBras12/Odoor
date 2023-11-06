@@ -22,9 +22,10 @@ const statusRef = ref(db, '/status');
 // Lorsque la page est chargée
 document.addEventListener('DOMContentLoaded', function() {
   // Récupérer la référence aux éléments de la page
-  const batteryElement = document.querySelector('.battery-icon');
-  const statusElement = document.querySelector('.door-icon');
-
+  //const batteryElement = document.querySelector('.battery-icon');
+ // const statusElement = document.querySelector('.door-icon');
+  const batteryElement = document.querySelector('h3');
+  const statusElement = document.querySelector('h4');
   // Récupérer la valeur initiale de "battery"
   get(batteryRef)
     .then((snapshot) => {

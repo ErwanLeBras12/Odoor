@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Récupérer la référence aux éléments de la page
   //const batteryElement = document.querySelector('.battery-icon');
  // const statusElement = document.querySelector('.door-icon');
-  const batteryElement = document.getElementByID("battery-icon");
-  const statusElement = document.getElementByID("door-icon");
+  const batteryElement = document.getElementById('battery-icon');
+  const statusElement = document.getElementById('door-icon');
  
   // Récupérer la valeur initiale de "battery"
   get(batteryRef)

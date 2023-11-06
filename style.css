@@ -23,17 +23,12 @@ h2{
 
 
 h3 {
-  color: white;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  font-size: 14px;
-  padding-top: 5px;
+  color: blue;
+  
 }
 
-h4{
-  font-size: 15px;
-  color: steelblue;
-  text-align: center;  
+h4{  
+  color: steelblue;    
 }
 
 body{  
@@ -96,6 +91,20 @@ body{
 
 /* Styles pour l'icône de la batterie */
 .battery-icon {
+    font-size: 36px;
+    color: blue;
+    display:inline-block;
+}
+
+/* Styles pour l'icône de la porte */
+#door-icon {
+    font-size: 36px;
+    color: blue;
+    display:inline-block;
+}
+
+/* Styles pour l'icône de la batterie */
+#battery-icon {
     font-size: 36px;
     color: blue;
     display:inline-block;

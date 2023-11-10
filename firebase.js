@@ -22,10 +22,10 @@ const statusRef = ref(db, '/status');
 // Lorsque la page est chargée
 document.addEventListener('DOMContentLoaded', function() {
   // Récupérer la référence aux éléments de la page
-  //const batteryElement = document.querySelector('.battery-icon');
- // const statusElement = document.querySelector('.door-icon');
-  const batteryElement = document.getElementById('battery-icon');
-  const statusElement = document.getElementById('door-icon');
+  const batteryElement = document.querySelector("#battery-icon");
+ const statusElement = document.querySelector("#door-icon");
+  //const batteryElement = document.getElementById('battery-icon');
+  //const statusElement = document.getElementById('door-icon');
  
   // Récupérer la valeur initiale de "battery"
   get(batteryRef)

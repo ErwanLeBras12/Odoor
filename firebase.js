@@ -22,8 +22,8 @@ const statusRef = ref(db, '/status');
 // Lorsque la page est chargée
 document.addEventListener('DOMContentLoaded', function() {
   // Récupérer la référence aux éléments de la page
-  const batteryElement = document.querySelector("#battery-icon").innerHtml;
- const statusElement = document.querySelector("#door-icon").innerHtml;
+  const batteryElement = document.querySelector("#battery-icon");
+ const statusElement = document.querySelector("#door-icon");
   //const batteryElement = document.getElementById('battery-icon');
   //const statusElement = document.getElementById('door-icon');
  
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const batteryValue = snapshot.val().battery;
       console.log('Valeur initiale : Niveau de batterie :', batteryValue);
       batteryElement.innerText  = `${batteryValue}%`;
+      batteryElement.innerHtml  = `<h3>${batteryValue}%</h3>`;
     })
     .catch((error) => {
       console.error('Erreur lors de la récupération de la valeur initiale de la batterie :', error);

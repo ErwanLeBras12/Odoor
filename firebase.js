@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .then((snapshot) => {
       const batteryValue = snapshot.val().battery;
       console.log('Valeur initiale : Niveau de batterie :', batteryValue);
-      batteryElement.innerText  = `${batteryValue}%`;      
+      //batteryElement.innerText  = `${batteryValue}%`;  
+      batteryElement.innerHTML = `<h3>${batteryValue}%</h3>`;    
     })
     .catch((error) => {
       console.error('Erreur lors de la récupération de la valeur initiale de la batterie :', error);

@@ -1,6 +1,3 @@
-// Définir l'en-tête Permissions-Policy au niveau du code
-//document.featurePolicy.allowedFeatures({ 'interest-cohort': 'none' });
-
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
 import { getDatabase, ref, onValue, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
 

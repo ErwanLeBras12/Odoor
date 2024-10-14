@@ -6,6 +6,10 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.listen(port, () => {
+  console.log(`Serveur démarré sur le port ${port}`);
+});
+
 // Configuration des sessions
 app.use(session({
   secret: 'secretKey123',

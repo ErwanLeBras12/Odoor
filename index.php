@@ -1,1 +1,0 @@
-<?= realpath('index.html'); ?>

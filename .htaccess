@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile "https://github.com/ErwanLeBras12/Odoor/blob/main/index.html/.htpasswd"
-Require valide-user

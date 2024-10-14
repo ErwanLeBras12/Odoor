@@ -1,3 +1,5 @@
+require('dotenv').config(); // Charger les variables d'environnement
+
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -5,10 +7,6 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-  console.log(`Serveur démarré sur le port ${port}`);
-});
 
 // Configuration des sessions
 app.use(session({
@@ -43,8 +41,8 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  const USERNAME = 'admin';
-  const PASSWORD = 'password123';
+  const USERNAME = process.env.USERNAME; // Récupérer le nom d'utilisateur depuis les variables d'environnement
+  const PASSWORD = process.env.PASSWORD; // Récupérer le mot de passe depuis les variables d'environnement
 
   if (username === USERNAME && password === PASSWORD) {
     req.session.user = username;
@@ -71,6 +69,6 @@ app.get('/logout', (req, res) => {
 });
 
 // Démarrer le serveur
-app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Serveur démarré sur le port ${port}`);
 });

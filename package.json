@@ -1,5 +1,5 @@
 {
-  "name": "mon-projet",
+  "name": "OdoorApp",
   "version": "1.0.0",
   "description": "Mon projet Node.js avec authentification",
   "main": "app.js",

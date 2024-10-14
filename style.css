@@ -1,0 +1,146 @@
+
+p {
+  color: black;      
+}
+
+#p1{
+  color:black;
+  margin-left:10%;
+  margin-top:2%;
+}
+
+h1{
+   font-size: 60px;
+   text-align: center;
+   color: black;
+}
+
+h2{
+   font-size: 32px;
+   text-align: center;
+   color: black;
+}
+
+
+h3 {
+  color: blue;
+  
+}
+
+h4{  
+  color: steelblue;    
+}
+
+body{  
+  background-repeat: no-repeat;
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  height: 100%;
+  width:100%;
+}
+
+#bat_ico{
+  display:inline-block;
+  vertical-align:text-bottom;
+}
+
+#porte_ico{
+  display:inline-block;
+  vertical-align: middle;
+  margin-top: -15px;
+}
+
+#logo{  
+  width:200px;
+  height:200px;
+}
+
+@media screen and (min-width: 768px) {
+  #logo_git {
+    float: right;
+    margin-top: -130px;
+    margin-right: 300px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #logo_git {
+    float: right;
+    margin-top: -30%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #logo_lk {
+    float: right;
+    margin-top: -128px;
+    margin-right: 260px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #logo_lk {
+    float: right;
+    margin-top: -30%;
+    margin-right: 23%;
+  }
+}
+
+
+ /*
+#logo_git{
+  float: right;
+  margin-top: -30%;
+  margin-right: 20%;
+}
+
+#logo_lk{
+  float: right;
+  margin-top: -30%;
+  margin-right: 8%;
+}
+*/
+
+#botpage{
+  position: absolute;
+ /* En fixant la distance avec le bas à 0, on force le contenu à être aligné vers le bas */
+ bottom: 25px;
+ width:100%; 
+
+}
+
+  /* Styles pour le conteneur global */
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles pour l'icône de la porte */
+.door-icon {
+    font-size: 36px;
+    color: blue;
+    display:inline-block;
+}
+
+/* Styles pour l'icône de la batterie */
+.battery-icon {
+    font-size: 36px;
+    color: blue;
+    display:inline-block;
+}
+
+/* Styles pour l'icône de la porte */
+#door-icon {
+    font-size: 36px;
+    color: blue;
+    display:inline-block;
+}
+
+/* Styles pour l'icône de la batterie */
+#battery-icon {
+    font-size: 36px;
+    color: blue;
+    display:inline-block;
+}
+
